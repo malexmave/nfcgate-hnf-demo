@@ -75,7 +75,7 @@ permissions and limitations under the Licence.
 
             <!-- Slide 1 - Introduction -->
             <div class="row content-row absolute" id="page-1">
-                <div class="col-6">
+                 <div class="col-6">
                     <h3>Kontaktlose Karten</h3>
                     <p>Kontaktlose Funktechnologien werden heute schon an vielen Orten eingesetzt. In Ihrem Personalausweis, im Reisepass, sogar in vielen EC- und Kreditkarten finden sich heute bereits kleine Funkchips. Mit diesen Karten können Sie sich im Internet ausweisen, oder im Laden kleine Beträge durch das Berühren eines Lesegeräts bezahlen. Auch Zugangskontrollsysteme setzen diese Technologie ein.</p>
 
@@ -162,10 +162,16 @@ permissions and limitations under the Licence.
                 </div>
             </div> -->
             <div class="row nopad">
-                <div class="col-6 text-left nopad">
+                <div class="col-4 text-left nopad">
                     <span id="log"></span>
                 </div>
-                <div class="col-6 nopad">
+                <div class="col-4 nopad text-center">
+                    <span class="circle circle-active" id="page-indicator-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="circle" id="page-indicator-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="circle" id="page-indicator-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="circle" id="page-indicator-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <div class="col-4 nopad">
                     <p> Mehr Informationen unter <a href="http://seemoo.de/nfcgate"><strong>seemoo.de/nfcgate</strong></a></p>
                 </div>
             </div>
@@ -269,6 +275,8 @@ permissions and limitations under the Licence.
                         timer = setTimeout(function() {
                             $(currentDiv).hide("slide", { direction: "right" }, 1000);
                             setTimeout(function() {$('#page-1').show("slide", { direction: "left" }, 1000)}, 100);
+                            pub.switch_off(current);
+                            pub.switch_on(1);
                             current = 1;
                         }, time_reset);
                     }, time_warn);
@@ -280,6 +288,14 @@ permissions and limitations under the Licence.
                     $('#countdown').fadeOut();
                 };
 
+                pub.switch_on = function(no) {
+                    $('#page-indicator-' + no).animate({backgroundColor: '#808080'}, 500); // Grey
+                };
+
+                pub.switch_off = function(no) {
+                    $('#page-indicator-' + no).animate({backgroundColor: '#ffffff'}, 500); // White
+                };
+
                 pub.advance = function() {
                     //$('#indicator').css('background-color', 'green');
                     if (current == 1) {
@@ -287,6 +303,8 @@ permissions and limitations under the Licence.
                             backgroundColor: "#00ff00"
                         }, 1000, function() {
                             slide_switch('#page-1', '#page-2', function() {$('#indicator-1').css('background-color', 'red');});
+                            pub.switch_off(1);
+                            pub.switch_on(2);
                             pub.warn_timer(INTERMEDIATE_TIME_WARN, INTERMEDIATE_TIME_RESET, '#page-2');
                         });
                         current = 2;
@@ -296,6 +314,8 @@ permissions and limitations under the Licence.
                             backgroundColor: "#00ff00"
                         }, 1000, function() {
                             slide_switch('#page-2', '#page-3', function() {$('#indicator-2').css('background-color', 'red')});
+                            pub.switch_off(2);
+                            pub.switch_on(3);
                             pub.warn_timer(INTERMEDIATE_TIME_WARN, INTERMEDIATE_TIME_RESET, '#page-3');
                         });
                         current = 3;
@@ -305,6 +325,8 @@ permissions and limitations under the Licence.
                             backgroundColor: "#00ff00"
                         }, 1000, function() {
                             slide_switch('#page-3', '#page-4', function() {$('#indicator-3').css('background-color', 'red')});
+                            pub.switch_off(3);
+                            pub.switch_on(4);
                             pub.warn_timer(FINAL_TIME_WARN, FINAL_TIME_RESET, '#page-4');
                         });
                         current = 4;
@@ -312,6 +334,8 @@ permissions and limitations under the Licence.
                         pub.clear_timer();
                         $('#page-4').hide("slide", { direction: "right" }, 1000);
                         setTimeout(function() {$('#page-1').show("slide", { direction: "left" }, 1000)}, 100);
+                        pub.switch_off(4);
+                        pub.switch_on(1);
                         current = 1;
                     }
                 };

@@ -370,3 +370,20 @@ hr {
 .panel-danger > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #ebccd1;
 }
+
+
+
+.circle {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: white;
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+.circle-active {
+  background: grey;
+}
