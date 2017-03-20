@@ -1,0 +1,3 @@
+autobahn==0.17.2
+nfcpy==0.12.0
+Twisted==17.1.0

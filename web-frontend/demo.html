@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/custom-grid.css">
+    </head>
+    <body>
+        <div class="container"  >
+
+            <div class="row">
+            	<div class="col-4">
+            		<h1>Kontaktlos? <strong>Aber sicher!</strong></h1>
+            		<p class="lead">Werden Sie selbst zum Sicherheitsforscher</p>
+            	</div>
+                <div class="col-6 text-center">
+                    <div id="countdown" style="display: none;">
+                        <p class="text-small">Exponat wird in</p>
+                        <p class="text-large" id="countdown-seconds">30</p>
+                        <p class="text-small">Sekunden zurückgesetzt</p>
+                    </div>
+                </div>
+            	<div class="col-2 text-right">
+            		<div id="carouselExampleSlidesOnly" class="carousel slide carousel-right" style="float: right;" data-ride="carousel">
+					  <div class="carousel-inner" role="listbox">
+					    <div class="carousel-item active">
+					      <img class="d-block img-fluid" src="img/cysec3.png" alt="First slide">
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block img-fluid" src="img/crisp3.png" alt="Second slide">
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block img-fluid" src="img/seemoo3.png" alt="Third slide">
+					    </div>
+                        <div class="carousel-item">
+                          <img class="d-block img-fluid" src="img/tud3.png" alt="Fourth slide">
+                        </div>
+					  </div>
+					</div>
+            	</div>
+            </div>
+
+            <!-- <section class="jumbotron text-center"> 
+            	<div class="container">
+            	    <h1 class="jumbotron-heading">Tür ist verschlossen</h1>
+            	    <p class="lead text-muted">Bitte halten Sie Ihre Karte an den Leser</p>
+            	</div>
+            </section> -->
+
+            <!-- Slide 1 - Introduction -->
+            <div class="row content-row absolute" id="page-1">
+                <div class="col-6">
+                    <h3>Kontaktlose Karten</h3>
+                    <p>Kontaktlose Funktechnologien werden heute schon an vielen Orten eingesetzt. In Ihrem Personalausweis, im Reisepass, sogar in vielen EC- und Kreditkarten finden sich heute bereits kleine Funkchips. Mit diesen Karten können Sie sich im Internet ausweisen, oder im Laden kleine Beträge durch das Berühren eines Lesegeräts bezahlen. Auch Zugangskontrollsysteme setzen diese Technologie ein.</p>
+
+                    <!-- <div class="panel panel-default stretch">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Wie funktioniert das?</h3>
+                      </div>
+                      <div class="panel-body">
+                        Das Lesegerät baut ein elektromagnetisches Feld auf, welches durch die Antennen in der Karte aufgefangen und in Strom umgewandelt wird. Dieser Strom versorgt einen kleinen Chip, der wiederum seine Nachrichten über das selbe Feld an den Leser übertragen kann.
+                      </div>
+                    </div> -->
+                    <h3>Probieren Sie es aus:</h3>
+                    <p><strong>Halten Sie die Schlüsselkarte an das Lesegerät</strong>, um die rechts angezeigte Tür zu öffnen und herauszufinden, welche Sicherheitsprobleme diese Technologie haben kann.</p>
+                </div>
+                <div class="col-6">
+                    <div style="background-color: red; height: 100%;" id="indicator-1"> </div>
+
+                </div>
+            </div> <!-- End row -->
+
+
+            <!-- Slide 2 - Clone -->
+            <div class="row content-row absolute" style="display: none;" id="page-2">
+                <div class="col-6">
+                    <h3>Sicherheit von kontaktloser Kommunikation</h3>
+                    <p>Die Sicherheit solcher Systeme hängt davon ab, wie genau sie die Identität der Karte prüfen, die ihnen vorgehalten wird. Manche Systeme benutzen komplizierte Mechanismen, die mittels Kryptographie sicherstellen, dass die Karte tatsächlich berechtigt ist, die Tür zu öffnen. Leider bauen andere Hersteller unsichere Systeme, die sich einfach überlisten lassen.</p>
+
+                    <h3>Probieren Sie es aus:</h3>
+                    <p><strong>Kopieren Sie die Schlüsselkarte</strong>, indem Sie sie kurz an die Rückseite des Smartphones halten. Halten Sie anschließend das Smartphone an das Lesegerät, um zu sehen, was passiert.</p>
+                </div>
+                <div class="col-6">
+                    <div style="background-color: red; height: 100%;" id="indicator-2"> </div>
+
+                </div>
+            </div> <!-- End row -->
+
+            <!-- Slide 3 - WTF just happened? -->
+            <div class="row content-row absolute" style="display: none;" id="page-3">
+                <div class="col-6">
+                    <h3>Was ist gerade passiert?</h3>
+                    <p>Dieses Schließsystem prüft nur die Seriennummer der Schlüsselkarte. Diese Nummer ist für jede Karte einzigartig, lässt sich allerdings mit unserer App auslesen und kopieren. Dadurch wurde das System überlistet - <strong>die Tür öffnet sich für eine unberechtigte Person!</strong> Ein Dieb könnte so zum Beispiel in der U-Bahn Ihre Schlüsselkarte auslesen und damit Ihr Büro aufschließen.</p>
+
+                    <h3>Ist das nicht gefährlich?</h3>
+                    <p>In den falschen Händen könnte unsere App auch von Kriminellen eingesetzt werden. Gleichzeitig können wir mit ihr Sicherheitsprobleme in Systemen finden, bevor es andere tun. Dadurch tragen wir zur Verbesserung der Sicherheit dieser Systeme bei. Es handelt sich also um eine <i>dual use</i>-Technologie, die sowohl helfen als auch schaden kann - dies ist in der IT-Sicherheitsforschung oft der Fall.</p>
+
+                    <h3>Wie können Sie sich schützen?</h3>
+                    <p>Halten Sie die Karte noch ein letztes mal vor das Lesegerät, um die Tür zu den Schutzmaßnahmen zu öffnen.</p>
+                </div>
+                <div class="col-6">
+                    <div style="background-color: red; height: 100%;" id="indicator-3"> </div>
+
+                </div>
+            </div> <!-- End row -->
+
+            <!-- Slide 4 - Schutzmaßnahmen -->
+            <div class="row content-row absolute" style="display: none;" id="page-4">
+                <div class="col-12">
+                    <h3>Welche Schutzmaßnahmen gibt es?</h3>
+                    <div class="row">
+                        <div class='col-6'>
+                            <h4>Für NutzerInnen:</h4>
+                            <p>Als Privatperson können Sie Ihre Karten schützen, indem Sie sie in speziellen <strong>Karten-Etuis</strong> transportieren, die Funkverbindungen blockieren. Dabei wird ein kleines Netz von Metalldrähten im Etui verbaut, welche das elektromagnetische Feld des Lesegerätes blockiert und damit das Auslesen der Karten verhindert.</p>
+
+                            <p>Dieser Effekt lässt sich auch mit Hausmitteln erzeugen: Wenn Sie Ihre Karte in <strong>Alufolie</strong> einwickeln oder diese in Ihr Portmonee einlegen, hat dies den selben Effekt: Die Karten können nur noch ausgelesen werden, wenn das Portmonee offen ist.</p>
+                        </div>
+                        <div class="col-6">
+                            <h4>Für Hersteller:</h4>
+
+                            <p>Die Hersteller von sicherheitskritischen Systemen sollten sicherstellen, dass ihre Geräte die Berechtigung der Karte genau prüfen. Dafür reicht es nicht aus, die Seriennummer der Karte zu prüfen - stattdessen sollte das System die Identität der Karte mit kryptographischen Methoden wie <strong>elektronischen Signaturen</strong> prüfen.</p>
+
+                            <p>Zusätzlich empfiehlt es sich, ein sogenanntes <strong>distance-bounding</strong>-Protokoll einzusetzen. Diese stellen sicher, dass die Karte sich tatsächlich in der Nähe des Lesers befindet. Wenn dies nicht geprüft wird, sind weitere Angriffe möglich.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End row -->
+
+        </div> <!-- /container -->
+        
+        <footer class="blog-footer">
+            <!-- <div style="position: relative; top: -10px;">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    
+                </div>
+            </div> -->
+            <div class="row nopad">
+                <div class="col-6 text-left nopad">
+                    <span id="log"></span>
+                </div>
+                <div class="col-6 nopad">
+                    <p> Mehr Informationen unter <a href="http://seemoo.de/nfcgate"><strong>seemoo.de/nfcgate</strong></a></p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js" ></script>
+        <script src="js/jquery-ui.js"></script>
+
+        <script type="text/javascript">
+            document.body.style.cursor = 'none';
+            var sock = null;
+            var ellog = null;
+            window.onload = function() {
+                var wsuri;
+                ellog = document.getElementById('log');
+
+                if (window.location.protocol === "file:") {
+                   wsuri = "ws://localhost:9000";
+                } else {
+                   wsuri = "ws://" + window.location.hostname + ":9000";
+                }
+
+                if ("WebSocket" in window) {
+                   sock = new WebSocket(wsuri);
+                } else if ("MozWebSocket" in window) {
+                   sock = new MozWebSocket(wsuri);
+                } else {
+                   log("Browser does not support WebSocket!");
+                }
+
+                if (sock) {
+                   sock.onopen = function() {
+                      //log("Connected to " + wsuri);
+                      log("");
+                   }
+                   sock.onclose = function(e) {
+                      //log("Connection closed (wasClean = " + e.wasClean + ", code = " + e.code + ", reason = '" + e.reason + "')");
+                      log("<strong style='color:red'>Verbindung zum Backend nicht möglich. Versuche erneut...</strong>");
+                      setTimeout(window.onload, 1000);
+                      sock = null;
+                   }
+
+                   sock.onmessage = function(e) {
+                      if (e.data == "04787312144e80") {
+                        orchestrator.advance();
+                      }
+                   }
+                }
+            };
+
+            function broadcast() {
+                var msg = document.getElementById('message').value;
+
+                if (sock) {
+                   sock.send(msg);
+                   log("Sent: " + msg);
+                } else {
+                   log("Not connected.");
+                }
+
+            };
+
+            function slide_switch(div1, div2, callback) {
+                $(div1).hide("slide", { direction: "left" }, 1000);
+                            setTimeout(function() {$(div2).show("slide", { direction: "right" }, 1000, callback)}, 100);
+            };
+            var orchestrator = (function() {
+                var INTERMEDIATE_TIME_WARN  = 30000; // 30 seconds
+                var INTERMEDIATE_TIME_RESET = 20000; // another 20 seconds during which a warning is displayed
+                var FINAL_TIME_WARN         = 40000; // 40 seconds
+                var FINAL_TIME_RESET        = 20000; // 20 seconds
+
+                var current = 1;
+                var timer = 0;
+                var interval = 0;
+
+                var timeRemaining = 0;
+
+                var pub = {};
+
+                pub.warn_timer = function(time_warn, time_reset, currentDiv) {
+                    timer = setTimeout(function() {
+                        $('#countdown').fadeIn(1000);
+                        timeRemaining = time_reset;
+                        $('#countdown-seconds').text(timeRemaining / 1000);
+                        interval = setInterval(function() {
+                            timeRemaining = timeRemaining - 1000;
+                            $('#countdown-seconds').text(timeRemaining / 1000);
+                            if (timeRemaining <= 0) {
+                                clearInterval(interval);
+                                $('#countdown').fadeOut(1000);
+                            }
+                        }, 1000);
+                        timer = setTimeout(function() {
+                            $(currentDiv).hide("slide", { direction: "right" }, 1000);
+                            setTimeout(function() {$('#page-1').show("slide", { direction: "left" }, 1000)}, 100);
+                            current = 1;
+                        }, time_reset);
+                    }, time_warn);
+                };
+
+                pub.clear_timer = function() {
+                    clearTimeout(timer);
+                    clearInterval(interval);
+                    $('#countdown').fadeOut();
+                };
+
+                pub.advance = function() {
+                    //$('#indicator').css('background-color', 'green');
+                    if (current == 1) {
+                        $('#indicator-1').animate({
+                            backgroundColor: "#00ff00"
+                        }, 1000, function() {
+                            slide_switch('#page-1', '#page-2', function() {$('#indicator-1').css('background-color', 'red');});
+                            pub.warn_timer(INTERMEDIATE_TIME_WARN, INTERMEDIATE_TIME_RESET, '#page-2');
+                        });
+                        current = 2;
+                    } else if (current == 2) {
+                        pub.clear_timer();
+                        $('#indicator-2').animate({
+                            backgroundColor: "#00ff00"
+                        }, 1000, function() {
+                            slide_switch('#page-2', '#page-3', function() {$('#indicator-2').css('background-color', 'red')});
+                            pub.warn_timer(INTERMEDIATE_TIME_WARN, INTERMEDIATE_TIME_RESET, '#page-3');
+                        });
+                        current = 3;
+                    } else if (current == 3) {
+                        pub.clear_timer();
+                        $('#indicator-3').animate({
+                            backgroundColor: "#00ff00"
+                        }, 1000, function() {
+                            slide_switch('#page-3', '#page-4', function() {$('#indicator-3').css('background-color', 'red')});
+                            pub.warn_timer(FINAL_TIME_WARN, FINAL_TIME_RESET, '#page-4');
+                        });
+                        current = 4;
+                    } else if (current == 4) {
+                        pub.clear_timer();
+                        $('#page-4').hide("slide", { direction: "right" }, 1000);
+                        setTimeout(function() {$('#page-1').show("slide", { direction: "left" }, 1000)}, 100);
+                        current = 1;
+                    }
+                };
+
+                return pub;
+            }());
+            
+
+            function log(m) {
+                ellog.innerHTML = m;
+                ellog.scrollTop = ellog.scrollHeight;
+            };
+        </script>
+    </body>
+</html>
