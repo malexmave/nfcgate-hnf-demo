@@ -387,3 +387,22 @@ hr {
 .circle-active {
   background: grey;
 }
+
+.door {
+  background:url(../img/anim_door.jpg);
+  width: 400px;
+  height: 800px;
+}
+
+.opening-door {
+  animation: open-door 1.5s steps(10);
+}
+
+.open-door {
+  background-position: 400px !important; 
+}
+
+@keyframes open-door {
+  from { background-position: 0px; }
+  to { background-position: -4000px; }
+}

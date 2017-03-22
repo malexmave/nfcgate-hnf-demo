@@ -91,7 +91,10 @@ permissions and limitations under the Licence.
                     <p><strong>Halten Sie die Schlüsselkarte an das Lesegerät</strong>, um die rechts angezeigte Tür zu öffnen und herauszufinden, welche Sicherheitsprobleme diese Technologie haben kann.</p>
                 </div>
                 <div class="col-6">
-                    <div style="background-color: red; height: 100%;" id="indicator-1"> </div>
+                    <div class="row">
+                        <div class="col-6" style="background-color: red; height: 100%;" id="indicator-1"> </div>
+                        <div class="col-6 door" id="door-1"> </div>
+                    </div>
 
                 </div>
             </div> <!-- End row -->
@@ -107,7 +110,10 @@ permissions and limitations under the Licence.
                     <p><strong>Kopieren Sie die Schlüsselkarte</strong>, indem Sie sie kurz an die Rückseite des Smartphones halten. Halten Sie anschließend das Smartphone an das Lesegerät, um zu sehen, was passiert.</p>
                 </div>
                 <div class="col-6">
-                    <div style="background-color: red; height: 100%;" id="indicator-2"> </div>
+                    <div class="row">
+                        <div class="col-6" style="background-color: red; height: 100%;" id="indicator-2"> </div>
+                        <div class="col-6 door" id="door-2"> </div>
+                    </div>
 
                 </div>
             </div> <!-- End row -->
@@ -125,7 +131,10 @@ permissions and limitations under the Licence.
                     <p>Halten Sie die Karte noch ein letztes mal vor das Lesegerät, um die Tür zu den Schutzmaßnahmen zu öffnen.</p>
                 </div>
                 <div class="col-6">
-                    <div style="background-color: red; height: 100%;" id="indicator-3"> </div>
+                    <div class="row">
+                        <div class="col-6" style="background-color: red; height: 100%;" id="indicator-3"> </div>
+                        <div class="col-6 door" id="door-3"> </div>
+                    </div>
 
                 </div>
             </div> <!-- End row -->
@@ -299,21 +308,43 @@ permissions and limitations under the Licence.
                 pub.advance = function() {
                     //$('#indicator').css('background-color', 'green');
                     if (current == 1) {
+                        // Play door opening animation
+                        $('#door-1').addClass('opening-door');
+                        // Also change indicator color
                         $('#indicator-1').animate({
                             backgroundColor: "#00ff00"
-                        }, 1000, function() {
-                            slide_switch('#page-1', '#page-2', function() {$('#indicator-1').css('background-color', 'red');});
+                        }, 1500, function() {
+                            // Door opening animation finished, remove class
+                            $('#door-1').removeClass('opening-door');
+                            // Instead set the door to open
+                            $('#door-1').addClass('open-door');
+                            // Slide over from page 1 to 2
+                            slide_switch('#page-1', '#page-2', function() {
+                                // Reset background color and door status
+                                $('#indicator-1').css('background-color', 'red');
+                                $('#door-1').removeClass('open-door');
+                            });
+                            // Update breadcrumbs
                             pub.switch_off(1);
                             pub.switch_on(2);
+                            // Update warn timer
                             pub.warn_timer(INTERMEDIATE_TIME_WARN, INTERMEDIATE_TIME_RESET, '#page-2');
                         });
                         current = 2;
                     } else if (current == 2) {
                         pub.clear_timer();
+                        $('#door-2').addClass('opening-door');
                         $('#indicator-2').animate({
                             backgroundColor: "#00ff00"
-                        }, 1000, function() {
-                            slide_switch('#page-2', '#page-3', function() {$('#indicator-2').css('background-color', 'red')});
+                        }, 1500, function() {
+                            // Door opening animation finished, remove class
+                            $('#door-2').removeClass('opening-door');
+                            // Instead set the door to open
+                            $('#door-2').addClass('open-door');
+                            slide_switch('#page-2', '#page-3', function() {
+                                $('#indicator-2').css('background-color', 'red');
+                                $('#door-2').removeClass('open-door');
+                            });
                             pub.switch_off(2);
                             pub.switch_on(3);
                             pub.warn_timer(INTERMEDIATE_TIME_WARN, INTERMEDIATE_TIME_RESET, '#page-3');
@@ -321,10 +352,18 @@ permissions and limitations under the Licence.
                         current = 3;
                     } else if (current == 3) {
                         pub.clear_timer();
+                        $('#door-3').addClass('opening-door');
                         $('#indicator-3').animate({
                             backgroundColor: "#00ff00"
-                        }, 1000, function() {
-                            slide_switch('#page-3', '#page-4', function() {$('#indicator-3').css('background-color', 'red')});
+                        }, 1500, function() {
+                            // Door opening animation finished, remove class
+                            $('#door-3').removeClass('opening-door');
+                            // Instead set the door to open
+                            $('#door-3').addClass('open-door');
+                            slide_switch('#page-3', '#page-4', function() {
+                                $('#indicator-3').css('background-color', 'red');
+                                $('#door-3').removeClass('open-door');
+                            });
                             pub.switch_off(3);
                             pub.switch_on(4);
                             pub.warn_timer(FINAL_TIME_WARN, FINAL_TIME_RESET, '#page-4');
