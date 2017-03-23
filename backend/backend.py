@@ -108,7 +108,7 @@ if __name__ == '__main__':
     thread = Thread(target=reactor.run, args=(False,)).start()
     
     try:
-        with nfc.ContactlessFrontend('tty') as clf:  # TODO Update to 'usb'
+        with nfc.ContactlessFrontend('usb') as clf:  # TODO Update to 'usb'
             try:
                 while True:
                     tag = clf.connect(rdwr={'on-connect': lambda tag: False})
