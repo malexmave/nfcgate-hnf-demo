@@ -410,7 +410,7 @@ hr {
 }
 
 .moving-scard {
-  animation: move 3s steps(10) infinite;
+  animation: move 4s steps(15) infinite;
 }
 
 .scanned-scard {
@@ -424,7 +424,7 @@ hr {
 }
 
 .moving-phone {
-  animation: move-phone 3s steps(14) infinite;
+  animation: move-phone 4s steps(19) infinite;
 }
 
 .scanned-phone {
@@ -433,12 +433,12 @@ hr {
 
 @keyframes move {
   from { background-position: 0px; }
-  to { background-position: -4000px; }
+  to { background-position: -6000px; }
 }
 
 @keyframes move-phone {
   from { background-position: 0px; }
-  to { background-position: -5600px; }
+  to { background-position: -7600px; }
 }
 
 
