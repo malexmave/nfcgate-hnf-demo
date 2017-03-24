@@ -395,14 +395,49 @@ hr {
 }
 
 .opening-door {
-  animation: open-door 1.5s steps(10);
+  animation: move 1.5s steps(10);
 }
 
 .open-door {
   background-position: 400px !important; 
 }
 
-@keyframes open-door {
+.scard {
+  background:url(../img/anim_card.jpg);
+  width: 400px;
+  height: 800px;
+}
+
+.moving-scard {
+  animation: move 3s steps(10) infinite;
+}
+
+.scanned-scard {
+  background-position: 400px !important;
+}
+
+.phone {
+  background:url(../img/anim_phone.jpg);
+  width: 400px;
+  height: 800px;
+}
+
+.moving-phone {
+  animation: move-phone 3s steps(14) infinite;
+}
+
+.scanned-phone {
+  background-position: 400px !important;
+}
+
+@keyframes move {
   from { background-position: 0px; }
   to { background-position: -4000px; }
 }
+
+@keyframes move-phone {
+  from { background-position: 0px; }
+  to { background-position: -5600px; }
+}
+
+

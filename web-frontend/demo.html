@@ -92,7 +92,8 @@ permissions and limitations under the Licence.
                 </div>
                 <div class="col-6">
                     <div class="row">
-                        <div class="col-6" style="background-color: red; height: 100%;" id="indicator-1"> </div>
+                        <!-- <div class="col-6" style="background-color: red; height: 100%;" id="indicator-1"> </div> -->
+                        <div class="col-6 scard moving-scard" style="margin: 0px !important; padding:0px !important;" id="scard-1"></div>
                         <div class="col-6 door" id="door-1"> </div>
                     </div>
 
@@ -111,7 +112,7 @@ permissions and limitations under the Licence.
                 </div>
                 <div class="col-6">
                     <div class="row">
-                        <div class="col-6" style="background-color: red; height: 100%;" id="indicator-2"> </div>
+                        <div class="col-6 phone moving-phone" id="phone-2"> </div>
                         <div class="col-6 door" id="door-2"> </div>
                     </div>
 
@@ -132,7 +133,7 @@ permissions and limitations under the Licence.
                 </div>
                 <div class="col-6">
                     <div class="row">
-                        <div class="col-6" style="background-color: red; height: 100%;" id="indicator-3"> </div>
+                        <div class="col-6 scard moving-scard" id="scard-3"> </div>
                         <div class="col-6 door" id="door-3"> </div>
                     </div>
 
@@ -310,10 +311,9 @@ permissions and limitations under the Licence.
                     if (current == 1) {
                         // Play door opening animation
                         $('#door-1').addClass('opening-door');
+                        $('#scard-1').removeClass('moving-scard').addClass('scanned-scard');
                         // Also change indicator color
-                        $('#indicator-1').animate({
-                            backgroundColor: "#00ff00"
-                        }, 1500, function() {
+                        setTimeout(function() {
                             // Door opening animation finished, remove class
                             $('#door-1').removeClass('opening-door');
                             // Instead set the door to open
@@ -321,7 +321,7 @@ permissions and limitations under the Licence.
                             // Slide over from page 1 to 2
                             slide_switch('#page-1', '#page-2', function() {
                                 // Reset background color and door status
-                                $('#indicator-1').css('background-color', 'red');
+                                $('#scard-1').removeClass('scanned-scard').addClass('moving-scard');
                                 $('#door-1').removeClass('open-door');
                             });
                             // Update breadcrumbs
@@ -329,45 +329,43 @@ permissions and limitations under the Licence.
                             pub.switch_on(2);
                             // Update warn timer
                             pub.warn_timer(INTERMEDIATE_TIME_WARN, INTERMEDIATE_TIME_RESET, '#page-2');
-                        });
+                        }, 1500);
                         current = 2;
                     } else if (current == 2) {
                         pub.clear_timer();
                         $('#door-2').addClass('opening-door');
-                        $('#indicator-2').animate({
-                            backgroundColor: "#00ff00"
-                        }, 1500, function() {
+                        $('#phone-2').removeClass('moving-phone').addClass('scanned-phone');
+                        setTimeout(function() {
                             // Door opening animation finished, remove class
                             $('#door-2').removeClass('opening-door');
                             // Instead set the door to open
                             $('#door-2').addClass('open-door');
                             slide_switch('#page-2', '#page-3', function() {
-                                $('#indicator-2').css('background-color', 'red');
+                                $('#phone-2').removeClass('scanned-phone').addClass('moving-phone');
                                 $('#door-2').removeClass('open-door');
                             });
                             pub.switch_off(2);
                             pub.switch_on(3);
                             pub.warn_timer(INTERMEDIATE_TIME_WARN, INTERMEDIATE_TIME_RESET, '#page-3');
-                        });
+                        }, 1500);
                         current = 3;
                     } else if (current == 3) {
                         pub.clear_timer();
                         $('#door-3').addClass('opening-door');
-                        $('#indicator-3').animate({
-                            backgroundColor: "#00ff00"
-                        }, 1500, function() {
+                        $('#scard-3').removeClass('moving-scard').addClass('scanned-scard');
+                        setTimeout(function() {
                             // Door opening animation finished, remove class
                             $('#door-3').removeClass('opening-door');
                             // Instead set the door to open
                             $('#door-3').addClass('open-door');
                             slide_switch('#page-3', '#page-4', function() {
-                                $('#indicator-3').css('background-color', 'red');
+                                $('#scard-3').removeClass('scanned-scard').addClass('moving-scard');
                                 $('#door-3').removeClass('open-door');
                             });
                             pub.switch_off(3);
                             pub.switch_on(4);
                             pub.warn_timer(FINAL_TIME_WARN, FINAL_TIME_RESET, '#page-4');
-                        });
+                        }, 1500);
                         current = 4;
                     } else if (current == 4) {
                         pub.clear_timer();
