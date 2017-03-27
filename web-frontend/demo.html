@@ -87,8 +87,10 @@ permissions and limitations under the Licence.
                         Das Lesegerät baut ein elektromagnetisches Feld auf, welches durch die Antennen in der Karte aufgefangen und in Strom umgewandelt wird. Dieser Strom versorgt einen kleinen Chip, der wiederum seine Nachrichten über das selbe Feld an den Leser übertragen kann.
                       </div>
                     </div> -->
-                    <h3>Probieren Sie es aus:</h3>
-                    <p><strong>Halten Sie die Schlüsselkarte an das Lesegerät</strong>, um die rechts angezeigte Tür zu öffnen und herauszufinden, welche Sicherheitsprobleme diese Technologie haben kann.</p>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><h3 class="panel-title" style="font-size: 1.5rem !important;">Probieren Sie es aus:</h3></div>
+                        <div class="panel-body"><strong>Halten Sie die Schlüsselkarte kurz an das Lesegerät</strong>, um die rechts angezeigte Tür zu öffnen und herauszufinden, welche Sicherheitsprobleme diese Technologie haben kann.</div>
+                    </div>
                 </div>
                 <div class="col-6">
                     <div class="row">
@@ -107,8 +109,10 @@ permissions and limitations under the Licence.
                     <h3>Sicherheit von kontaktloser Kommunikation</h3>
                     <p>Die Sicherheit solcher Systeme hängt davon ab, wie genau sie die Identität der Karte prüfen, die ihnen vorgehalten wird. Manche Systeme benutzen komplizierte Mechanismen, die mittels Kryptographie sicherstellen, dass die Karte tatsächlich berechtigt ist, die Tür zu öffnen. Leider bauen andere Hersteller unsichere Systeme, die sich einfach überlisten lassen.</p>
 
-                    <h3>Probieren Sie es aus:</h3>
-                    <p><strong>Kopieren Sie die Schlüsselkarte</strong>, indem Sie sie kurz an die Rückseite des Smartphones halten. Halten Sie anschließend das Smartphone an das Lesegerät, um zu sehen, was passiert.</p>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><h3 class="panel-title" style="font-size: 1.5rem !important;">Probieren Sie es aus:</h3></div>
+                        <div class="panel-body"><strong>Kopieren Sie die Schlüsselkarte</strong>, indem Sie sie kurz an die Rückseite des Smartphones halten. Halten Sie anschließend das Smartphone kurz an das Lesegerät, um zu sehen, was passiert.</div>
+                    </div>
                 </div>
                 <div class="col-6">
                     <div class="row">
@@ -128,8 +132,11 @@ permissions and limitations under the Licence.
                     <h3>Ist das nicht gefährlich?</h3>
                     <p>In den falschen Händen könnte unsere App auch von Kriminellen eingesetzt werden. Gleichzeitig können wir mit ihr Sicherheitsprobleme in Systemen finden, bevor es andere tun. Dadurch tragen wir zur Verbesserung der Sicherheit dieser Systeme bei. Es handelt sich also um eine <i>dual use</i>-Technologie, die sowohl helfen als auch schaden kann - dies ist in der IT-Sicherheitsforschung oft der Fall.</p>
 
-                    <h3>Wie können Sie sich schützen?</h3>
-                    <p>Halten Sie die Karte noch ein letztes mal vor das Lesegerät, um die Tür zu den Schutzmaßnahmen zu öffnen.</p>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><h3 class="panel-title" style="font-size: 1.5rem !important;">Wie können Sie sich schützen?</h3></div>
+                        <div class="panel-body">Halten Sie die Karte noch ein letztes mal vor das Lesegerät, um die Tür zu den Schutzmaßnahmen zu öffnen.</div>
+                    </div>
+
                 </div>
                 <div class="col-6">
                     <div class="row">
@@ -261,9 +268,9 @@ permissions and limitations under the Licence.
                             setTimeout(function() {$(div2).show("slide", { direction: "right" }, 1000, callback)}, 100);
             };
             var orchestrator = (function() {
-                var INTERMEDIATE_TIME_WARN  = 30000; // 30 seconds
+                var INTERMEDIATE_TIME_WARN  = 40000; // 30 seconds
                 var INTERMEDIATE_TIME_RESET = 20000; // another 20 seconds during which a warning is displayed
-                var FINAL_TIME_WARN         = 40000; // 40 seconds
+                var FINAL_TIME_WARN         = 60000; // 40 seconds
                 var FINAL_TIME_RESET        = 20000; // 20 seconds
 
                 var current = 1;
