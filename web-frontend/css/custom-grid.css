@@ -1,7 +1,7 @@
 body {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   overflow:hidden;
 }
 
@@ -10,7 +10,7 @@ h1 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .lead {
@@ -315,6 +315,20 @@ hr {
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #428bca;
 }
+.panel-instruction {
+  border-color: #000000;
+}
+.panel-instruction > .panel-heading {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #000000;
+}
+.panel-instruction > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #000000;
+}
+.panel-instruction > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #000000;
+}
 .panel-success {
   border-color: #d6e9c6;
 }
@@ -447,3 +461,14 @@ hr {
 }
 
 
+
+.card-sidenote {
+  /*background-color: #E0E0E0;
+  border-color: #E0E0E0; */
+  color: #686868;
+}
+
+.card-sidenote .card-header,
+.card-sidenote .card-footer {
+  background-color: transparent;
+}

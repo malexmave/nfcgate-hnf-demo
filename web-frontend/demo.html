@@ -35,11 +35,11 @@ permissions and limitations under the Licence.
         <div class="container"  >
 
             <div class="row">
-            	<div class="col-4">
+            	<div class="col-5">
             		<h1>Kontaktlos? <strong>Aber sicher!</strong></h1>
             		<p class="lead">Werden Sie selbst zum Sicherheitsforscher</p>
             	</div>
-                <div class="col-6 text-center">
+                <div class="col-5 text-center">
                     <div id="countdown" style="display: none;">
                         <p class="text-small">Exponat wird in</p>
                         <p class="text-large" id="countdown-seconds">30</p>
@@ -77,7 +77,8 @@ permissions and limitations under the Licence.
             <div class="row content-row absolute" id="page-1">
                  <div class="col-6">
                     <h3>Kontaktlose Karten</h3>
-                    <p>Kontaktlose Funktechnologien werden heute schon an vielen Orten eingesetzt. In Ihrem Personalausweis, im Reisepass, sogar in vielen EC- und Kreditkarten finden sich heute bereits kleine Funkchips. Mit diesen Karten können Sie sich im Internet ausweisen, oder im Laden kleine Beträge durch das Berühren eines Lesegeräts bezahlen. Auch Zugangskontrollsysteme setzen diese Technologie ein.</p>
+                    <p>Kontaktlose Funktechnologien werden in vielen Anwendungen eingesetzt. Eine dieser Technologien ist NFC (Near Field Communication).</p>
+                    <p>Mit dem elektronischen Personalausweis und Reisepass können Sie sich im Internet ausweisen. Bei NFC-Schließsystemen können Sie Türen mit einer Schlüsselkarte öffnen. Mit vielen EC- und Kreditkarten kann man mittlerweile in Geschäften kontaktlos bezahlen.</p>
 
                     <!-- <div class="panel panel-default stretch">
                       <div class="panel-heading">
@@ -87,9 +88,11 @@ permissions and limitations under the Licence.
                         Das Lesegerät baut ein elektromagnetisches Feld auf, welches durch die Antennen in der Karte aufgefangen und in Strom umgewandelt wird. Dieser Strom versorgt einen kleinen Chip, der wiederum seine Nachrichten über das selbe Feld an den Leser übertragen kann.
                       </div>
                     </div> -->
-                    <div class="panel panel-primary">
-                        <div class="panel-heading"><h3 class="panel-title" style="font-size: 1.5rem !important;">Probieren Sie es aus:</h3></div>
-                        <div class="panel-body"><strong>Halten Sie die Schlüsselkarte kurz an das Lesegerät</strong>, um die rechts angezeigte Tür zu öffnen und herauszufinden, welche Sicherheitsprobleme diese Technologie haben kann.</div>
+                    <div class="panel panel-instruction stretch">
+                        <div class="panel-body">
+                            <h3 >Probieren Sie es aus:</h3>
+                            <strong>Halten Sie die NFC-Schlüsselkarte an das Schloss auf dem Lesegerät</strong>, um die Tür zu öffnen. Finden Sie so heraus, welche Sicherheitsprobleme diese Technik haben kann.
+                        </div>
                     </div>
                 </div>
                 <div class="col-6">
@@ -97,6 +100,7 @@ permissions and limitations under the Licence.
                         <!-- <div class="col-6" style="background-color: red; height: 100%;" id="indicator-1"> </div> -->
                         <div class="col-6 scard moving-scard" style="margin: 0px !important; padding:0px !important;" id="scard-1"></div>
                         <div class="col-6 door" id="door-1"> </div>
+                        <!--<div style="position: absolute; top: 100px; left: 75px; color: red; font-family: monospace;"><strong>Karte nicht autorisiert</strong></div>-->
                     </div>
 
                 </div>
@@ -107,11 +111,16 @@ permissions and limitations under the Licence.
             <div class="row content-row absolute" style="display: none;" id="page-2">
                 <div class="col-6">
                     <h3>Sicherheit von kontaktloser Kommunikation</h3>
-                    <p>Die Sicherheit solcher Systeme hängt davon ab, wie genau sie die Identität der Karte prüfen, die ihnen vorgehalten wird. Manche Systeme benutzen komplizierte Mechanismen, die mittels Kryptographie sicherstellen, dass die Karte tatsächlich berechtigt ist, die Tür zu öffnen. Leider bauen andere Hersteller unsichere Systeme, die sich einfach überlisten lassen.</p>
+                    <p>Die Sicherheit von NFC-Systemen hängt davon ab, wie sie die Identität der Karte prüfen.</p>
+                    <p>Sichere Systeme benutzen Kryptographie, um sicherzustellen, dass die Karte berechtigt ist, die Tür zu öffnen.</p>
+                    <p>Leider bauen manche Hersteller unsichere Systeme, die sich leicht überlisten lassen.</p>
 
-                    <div class="panel panel-primary">
-                        <div class="panel-heading"><h3 class="panel-title" style="font-size: 1.5rem !important;">Probieren Sie es aus:</h3></div>
-                        <div class="panel-body"><strong>Kopieren Sie die Schlüsselkarte</strong>, indem Sie sie kurz an die Rückseite des Smartphones halten. Halten Sie anschließend das Smartphone kurz an das Lesegerät, um zu sehen, was passiert.</div>
+                    <div class="panel panel-instruction stretch">
+                        <div class="panel-body">
+                            <h3>Probieren Sie es aus:</h3>
+                            <p>Kopieren Sie die NFC-Schlüsselkarte, indem Sie sie an die Rückseite des Smartphones halten. Achten Sie dabei auf den Bildschirm des Smartphones.</p>
+                            Berühren Sie anschließend mit der Rückseite des Smartphones das Schloss auf dem Lesegerät und sehen Sie, was passiert.
+                        </div>
                     </div>
                 </div>
                 <div class="col-6">
@@ -127,15 +136,21 @@ permissions and limitations under the Licence.
             <div class="row content-row absolute" style="display: none;" id="page-3">
                 <div class="col-6">
                     <h3>Was ist gerade passiert?</h3>
-                    <p>Dieses Schließsystem prüft nur die Seriennummer der Schlüsselkarte. Diese Nummer ist für jede Karte einzigartig, lässt sich allerdings mit unserer App auslesen und kopieren. Dadurch wurde das System überlistet - <strong>die Tür öffnet sich für eine unberechtigte Person!</strong> Ein Dieb könnte so zum Beispiel in der U-Bahn Ihre Schlüsselkarte auslesen und damit Ihr Büro aufschließen.</p>
+                    <p>Dieses Schließsystem ist unsicher, denn es prüft nur ein einziges Sicherheitsmerkmal: die Seriennummer der Schlüsselkarte. Jede NFC-Karte besitzt zwar eine einzigartige Seriennummer, diese kann aber leicht ausgelesen und kopiert werden.</p>
+                    <p>Damit haben Sie das Schließsystem überlistet. Die Tür konnte mit der kopierten Information auf dem Smartphone geöffnet werden, statt mit der zugehörigen Schlüsselkarte. Ein Dieb könnte zum Beispiel im Gedränge Ihre NFC-Schlüsselkarte aus dem Geldbeutel in der Hosentasche auslesen und damit Ihr Büro aufschließen.</p>
 
-                    <h3>Ist das nicht gefährlich?</h3>
-                    <p>In den falschen Händen könnte unsere App auch von Kriminellen eingesetzt werden. Gleichzeitig können wir mit ihr Sicherheitsprobleme in Systemen finden, bevor es andere tun. Dadurch tragen wir zur Verbesserung der Sicherheit dieser Systeme bei. Es handelt sich also um eine <i>dual use</i>-Technologie, die sowohl helfen als auch schaden kann - dies ist in der IT-Sicherheitsforschung oft der Fall.</p>
-
-                    <div class="panel panel-primary">
-                        <div class="panel-heading"><h3 class="panel-title" style="font-size: 1.5rem !important;">Wie können Sie sich schützen?</h3></div>
-                        <div class="panel-body">Halten Sie die Karte noch ein letztes mal vor das Lesegerät, um die Tür zu den Schutzmaßnahmen zu öffnen.</div>
+                    <div class="panel panel-instruction stretch">
+                        <div class="panel-body">
+                            <h3>Wie können Sie sich schützen?</h3>
+                            Halten Sie die NFC-Schlüsselkarte noch einmal an das Schloss auf dem Lesegerät.
+                        </div>
                     </div>
+                    <!-- <div class="card card-sidenote mb-3 stretch">
+                      <div class="card-block"> -->
+                        <h3 style="color: #686868;">Ist das nicht gefährlich?</h3>
+                        <span style="font-size: 1.4rem !important; color: #686868;">In den falschen Händen könnte unser System auch von Kriminellen eingesetzt werden. Gleichzeitig können wir damit Sicherheitsprobleme in Systemen finden, bevor es andere tun. Dadurch tragen wir zur Verbesserung der Sicherheit dieser Systeme bei. Es handelt sich also um eine <i>dual use</i>-Technologie, die sowohl helfen als auch schaden kann - dies ist in der IT-Sicherheitsforschung oft der Fall.</span>
+                      <!-- </div>
+                    </div> -->
 
                 </div>
                 <div class="col-6">
@@ -153,20 +168,19 @@ permissions and limitations under the Licence.
                     <h3>Welche Schutzmaßnahmen gibt es?</h3>
                     <div class="row">
                         <div class='col-6'>
-                            <h4>Für NutzerInnen:</h4>
-                            <p>Als Privatperson können Sie Ihre Karten schützen, indem Sie sie in speziellen <strong>Karten-Etuis</strong> transportieren, die Funkverbindungen blockieren. Dabei wird ein kleines Netz von Metalldrähten im Etui verbaut, welche das elektromagnetische Feld des Lesegerätes blockiert und damit das Auslesen der Karten verhindert.</p>
+                            <p>Als <strong>Privatperson</strong> können Sie Ihre NFC-Karten schützen, indem Sie sie in speziellen Hüllen transportieren. Diese Kartenhüllen blockieren Funkverbindungen, da das Material ein sehr feines Netz von Metalldrähten enthält.</p>
 
-                            <p>Dieser Effekt lässt sich auch mit Hausmitteln erzeugen: Wenn Sie Ihre Karte in <strong>Alufolie</strong> einwickeln oder diese in Ihr Portmonee einlegen, hat dies den selben Effekt: Die Karten können nur noch ausgelesen werden, wenn das Portmonee offen ist.</p>
+                            <p>Dieser Effekt lässt sich auch mit einem einfachen Hausmittel erzeugen: Legen Sie ein passend zugeschnittenes Stück <strong>Aluminiumfolie</strong> in das Scheinfach Ihres Geldbeutels. Solange alle Karten von der Aluminiumfolie bedeckt sind, können sie nicht ausgelesen werden.</p>
                             <img src="img/nfc-wallet.png" width="400px" />
                             <img src="img/nfc-sleeve.png" width="400px"/>
                         </div>
                         <div class="col-6">
-                            <h4>Für Hersteller:</h4>
+                            <p>Die <strong>Hersteller</strong> von NFC-Systemen sollten sicherstellen, dass ihre Geräte die Berechtigung der Karte genau prüfen. Wie unser Experiment gezeigt hat, reicht die Seriennummer als einziges Sicherheitsmerkmal nicht aus. Stattdessen sollte das System die Identität der NFC-Karte mit kryptographischen Methoden, wie zum Beispiel elektronischen Signaturen, prüfen.</p>
 
-                            <p>Die Hersteller von sicherheitskritischen Systemen sollten sicherstellen, dass ihre Geräte die Berechtigung der Karte genau prüfen. Dafür reicht es nicht aus, die Seriennummer der Karte zu prüfen - stattdessen sollte das System die Identität der Karte mit kryptographischen Methoden wie <strong>elektronischen Signaturen</strong> prüfen.</p>
-
-                            <p>Zusätzlich empfiehlt es sich, ein sogenanntes <strong>distance-bounding</strong>-Protokoll einzusetzen. Diese stellen sicher, dass die Karte sich tatsächlich in der Nähe des Lesers befindet. Wenn dies nicht geprüft wird, sind weitere Angriffe möglich.</p>
+                            <!--<p>Ein weiteres Sicherheitsmerkmal ist das distance-bounding-Protokoll: Damit kann das System prüfen, dass die Karte sich tatsächlich in der Nähe des Lesegeräts befindet.</p> -->
+                            <p>Um andere Angriffe zu verhindern, sollten Hersteller außerdem ein <i>distance-bounding</i>-Protokoll einsetzen. Damit prüft das System, dass die Karte sich tatsächlich in der Nähe des Lesegeräts befindet.</p>
                             <center>
+                            <!--<img src="img/nfc-signature.png" width="400px" /> -->
                             <img src="img/nfc-distance-bounding.png"  width="400px"/>
                             </center>
                         </div>
@@ -246,6 +260,8 @@ permissions and limitations under the Licence.
                    sock.onmessage = function(e) {
                       if (e.data == "04787312144e80") {
                         orchestrator.advance();
+                      } else if (e.data == "046c6512144e80") {
+                        orchestrator.advance();
                       }
                    }
                 }
@@ -268,9 +284,9 @@ permissions and limitations under the Licence.
                             setTimeout(function() {$(div2).show("slide", { direction: "right" }, 1000, callback)}, 100);
             };
             var orchestrator = (function() {
-                var INTERMEDIATE_TIME_WARN  = 40000; // 30 seconds
+                var INTERMEDIATE_TIME_WARN  = 40000; // 40 seconds
                 var INTERMEDIATE_TIME_RESET = 20000; // another 20 seconds during which a warning is displayed
-                var FINAL_TIME_WARN         = 60000; // 40 seconds
+                var FINAL_TIME_WARN         = 60000; // 60 seconds
                 var FINAL_TIME_RESET        = 20000; // 20 seconds
 
                 var current = 1;
